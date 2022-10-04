@@ -15,5 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
 Route::get('/portal', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard.index')->middleware('auth');
+//website pages
+Route::get('/about', [App\Http\Controllers\PageController::class, 'about'])->name('about');
+Route::get('/classes', [App\Http\Controllers\PageController::class, 'classes'])->name('classes');
+Route::get('/facilities', [App\Http\Controllers\PageController::class, 'facility'])->name('facility');
+Route::get('/teachers', [App\Http\Controllers\PageController::class, 'teacher'])->name('teacher');
+Route::get('/appointments', [App\Http\Controllers\PageController::class, 'appointment'])->name('appointment');
+Route::get('/contact-us', [App\Http\Controllers\PageController::class, 'contact'])->name('contact');
 
 require __DIR__.'/auth.php';
