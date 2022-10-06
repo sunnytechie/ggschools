@@ -3,7 +3,7 @@
 @section('content')
 
     <!-- Page Header End -->
-    <div class="container-xxl py-5 page-header position-relative mb-5" style="background-image: url('')">
+    <div class="container-xxl py-5 page-header position-relative mb-5" style="background-image: url('{{ asset('assets/img/about2.jpg') }}'); background-position: center;">
         <div class="container py-5">
             <h1 class="display-2 text-white animated slideInDown mb-4">About Us</h1>
             <nav aria-label="breadcrumb animated slideInDown">
@@ -16,7 +16,8 @@
         </div>
     </div>
     <!-- Page Header End -->
-
+    @include('include.home.about')
+    
     @include('include.home.action')
 
     @include('include.home.team')

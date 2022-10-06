@@ -22,5 +22,6 @@ Route::get('/facilities', [App\Http\Controllers\PageController::class, 'facility
 Route::get('/teachers', [App\Http\Controllers\PageController::class, 'teacher'])->name('teacher');
 Route::get('/appointments', [App\Http\Controllers\PageController::class, 'appointment'])->name('appointment');
 Route::get('/contact-us', [App\Http\Controllers\PageController::class, 'contact'])->name('contact');
+Route::get('/admission', [App\Http\Controllers\PageController::class, 'admission'])->name('admission');
 
 require __DIR__.'/auth.php';

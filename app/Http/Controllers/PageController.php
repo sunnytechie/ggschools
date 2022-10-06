@@ -29,4 +29,8 @@ class PageController extends Controller
     public function contact() {
         return view('pages.contact');
     }
+
+    public function admission() {
+        return view('pages.admissioin');
+    }
 }
