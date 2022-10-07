@@ -23,7 +23,7 @@
                 </div>
             </div>
             <a href="{{ route('contact') }}" class="nav-item nav-link">Contact Us</a>
-            <a href="#" class="nav-item nav-link">Check Results</a>
+            <a href="{{ route('dashboard.index') }}" class="nav-item nav-link">Check Results</a>
         </div>
         <a href="{{ route('admission') }}" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Admission<i class="fa fa-arrow-right ms-3"></i></a>
     </div>

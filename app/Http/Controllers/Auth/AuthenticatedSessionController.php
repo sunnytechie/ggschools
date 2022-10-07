@@ -32,7 +32,8 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        return redirect()->route('dashboard.index')->with('message', 'Welcome to Gurus and Genius Schools');
+        //return redirect()->intended(RouteServiceProvider::HOME);
     }
 
     /**
