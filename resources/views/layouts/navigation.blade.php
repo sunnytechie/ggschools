@@ -46,7 +46,7 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src="https://cdn.pixabay.com/photo/2017/03/05/21/55/emoticon-2120024_960_720.png" alt class="w-px-40 h-auto rounded-circle" />
+                      <img src="{{ asset('assets/img/avatar.jpg') }}" alt class="w-px-40 h-auto rounded-circle" />
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -65,15 +65,18 @@
                         </div>
                       </a>
                     </li>
-                    {{-- <li>
+                    <li>
                       <div class="dropdown-divider"></div>
-                    </li> --}}
-                    {{-- <li>
-                      <a class="dropdown-item" href="#">
+                    </li> 
+                    <li>
+                      <a class="dropdown-item"
+                      data-bs-toggle="modal"
+                      data-bs-target="#editProfileModal"
+                      href="#">
                         <i class="bx bx-user me-2"></i>
-                        <span class="align-middle">My Profile</span>
+                        <span class="align-middle">Profile</span>
                       </a>
-                    </li> --}}
+                    </li>
                    
                     <li>
                       <div class="dropdown-divider"></div>

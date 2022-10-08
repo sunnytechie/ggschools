@@ -12,11 +12,18 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
+//Result Portal
 Route::get('/portal', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard.index')->middleware('auth');
+Route::put('/profile/{user}', [App\Http\Controllers\ProfileController::class, 'update'])->name('update.profile')->middleware('auth');
+Route::put('/token/{user}', [App\Http\Controllers\TokenController::class, 'update'])->name('update.token')->middleware('auth');
+Route::post('/result', [App\Http\Controllers\ResultCheckController::class, 'checkResult'])->name('checkResult')->middleware('auth');
+Route::get('/upload', [App\Http\Controllers\AdminController::class, 'index'])->name('upload.result')->middleware('auth');
+//Feedback
+Route::post('result-import', [App\Http\Controllers\AdminController::class, 'resultImport'])->name('result.import')->middleware('auth');
+Route::post('student-import', [App\Http\Controllers\AdminController::class, 'studentImport'])->name('student.import')->middleware('auth');
 
-//website pages
+//Website Pages
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
 Route::get('/about', [App\Http\Controllers\PageController::class, 'about'])->name('about');
 Route::get('/classes', [App\Http\Controllers\PageController::class, 'classes'])->name('classes');
 Route::get('/facilities', [App\Http\Controllers\PageController::class, 'facility'])->name('facility');

@@ -33,8 +33,24 @@
 
   {{-- Session Message --}}
   @if (session('message'))
-      <div style="position: fixed; right: 10px; bottom: 20px" class="alert alert-success alert-dismissible fade show bottom-alert" id="bottomAlert" role="alert" style="background: #fff; color: #000">
+      {{-- <div style="position: fixed; right: 10px; bottom: 20px" class="alert alert-success alert-dismissible fade show bottom-alert" id="bottomAlert" role="alert" style="background: #fff; color: #000">
         <strong>{{ session('message') }}</strong>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+      </div> --}}
+      <div
+        class="bs-toast toast fade show bg-danger"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        style="position: fixed; right: 10px; bottom: 20px">
+        <div class="toast-header">
+          <i class="bx bx-bell me-2"></i>
+          <div class="me-auto fw-semibold">Notification</div>
+          <small>Just now!</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          {{ session('message') }}
+        </div>
       </div>
   @endif

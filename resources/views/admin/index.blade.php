@@ -5,74 +5,59 @@
           <div class="col-lg-12 mb-4">
             <div class="card">
               <div class="d-flex align-items-end row">
-                <div class="col-sm-7">
+                <div class="col-sm-6 offset-md-2">
                   <div class="card-body">
-                    <h5 class="card-title text-primary">Student Profile </h5>
-                    <p class="mb-3">
-                      Registeration Number: {{ Auth::user()->reg_no }}
-                    </p>
-                    <p class="mb-3">
-                      Class: {{ Auth::user()->student_class }}
-                    </p>
-                    <p class="mb-3">
-                      Session: {{ Auth::user()->session }}
-                    </p>
-                    <button
-                    data-bs-toggle="modal"
-                      data-bs-target="#editProfileModal"
-                    class="btn btn-sm btn-outline-primary">Edit information</button>
+                    <h5 class="card-title text-primary">Upload Result </h5>
+                    <form action="{{ route('result.import') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <div class="input-group">
+                            <input
+                              type="file"
+                              name="file"
+                              class="form-control"
+                              id="inputGroupFile04"
+                              aria-describedby="inputGroupFileAddon04"
+                              aria-label="Upload"
+                            />
+                            <button class="btn btn-outline-primary" type="submit" id="inputGroupFileAddon04">Publish</button>
+                          </div>
+                    </form>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
 
           <div class="col-lg-12 mb-4">
             <div class="card">
               <div class="d-flex align-items-end row">
-                <div class="col-sm-7">
+                <div class="col-sm-6 offset-md-2">
                   <div class="card-body">
-                    <h5 class="card-title text-primary">Check Result </h5>
-                    <p class="mb-4">
-                      You can view all student result
-                    </p>
-                    <button 
-                      data-bs-toggle="modal"
-                      data-bs-target="#checkResultModal"
-                      class="btn btn-sm btn-outline-primary">Proceed to check result</button>
+                    <h5 class="card-title text-primary">Upload Result Details </h5>
+                    <form action="{{ route('student.import') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <div class="input-group">
+                            <input
+                              type="file"
+                              name="file"
+                              class="form-control"
+                              id="inputGroupFile04"
+                              aria-describedby="inputGroupFileAddon04"
+                              aria-label="Upload"
+                            />
+                            <button class="btn btn-outline-primary" type="submit" id="inputGroupFileAddon04">Publish</button>
+                          </div>
+                    </form>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-
-          <div class="col-lg-12 mb-4">
-            <div class="card">
-              <div class="d-flex align-items-end row">
-                <div class="col-sm-7">
-                  <div class="card-body">
-                    <h5 class="card-title text-primary">Result Pin</h5>
-                    <p class="mb-4">
-                      Check Pin validation or duration
-                    </p>
-                    <button 
-                    data-bs-toggle="modal"
-                      data-bs-target="#changeTokenModal"
-                    class="btn btn-sm btn-outline-primary">Update token</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          
           
           
         </div>
 </div>
+
 
 {{-- Modal check result --}}
 <div class="modal fade" id="checkResultModal" tabindex="-1" aria-hidden="true">

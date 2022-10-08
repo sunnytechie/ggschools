@@ -1,75 +1,90 @@
 <x-app-layout>
+    <style>
+        
+    </style>
+
     <div class="container-xxl flex-grow-1 container-p-y">
         <div class="row">
 
-          <div class="col-lg-12 mb-4">
-            <div class="card">
-              <div class="d-flex align-items-end row">
-                <div class="col-sm-7">
-                  <div class="card-body">
-                    <h5 class="card-title text-primary">Student Profile </h5>
-                    <p class="mb-3">
-                      Registeration Number: {{ Auth::user()->reg_no }}
-                    </p>
-                    <p class="mb-3">
-                      Class: {{ Auth::user()->student_class }}
-                    </p>
-                    <p class="mb-3">
-                      Session: {{ Auth::user()->session }}
-                    </p>
-                    <button
-                    data-bs-toggle="modal"
-                      data-bs-target="#editProfileModal"
-                    class="btn btn-sm btn-outline-primary">Edit information</button>
-                  </div>
+            <div class="col-lg-12 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">FullName: {{ $detail->fullname }}</h5>
+                        <p class="card-text">Reg.Number: {{ $detail->reg_no }}</p>
+                        <p class="card-text">Class: {{ $detail->student_class }}</p>
+                        <p class="card-text">Session: {{ $detail->academic_session }}</p>
+                        <p class="card-text">Term: {{ $detail->term }}</p>
+                    </div>
                 </div>
               </div>
-            </div>
-          </div>
-
 
           <div class="col-lg-12 mb-4">
-            <div class="card">
-              <div class="d-flex align-items-end row">
-                <div class="col-sm-7">
-                  <div class="card-body">
-                    <h5 class="card-title text-primary">Check Result </h5>
-                    <p class="mb-4">
-                      You can view all student result
-                    </p>
-                    <button 
-                      data-bs-toggle="modal"
-                      data-bs-target="#checkResultModal"
-                      class="btn btn-sm btn-outline-primary">Proceed to check result</button>
-                  </div>
+              <!-- Bootstrap Table with Header - Light -->
+              <div class="card">
+                
+                <div class="table-responsive text-nowrap">
+                  <table class="table">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Subject</th>
+                        <th>1<sup>st</sup>Exercise</th>
+                        <th>1<sup>st</sup>Assignment</th>
+                        <th>test</th>
+                        <th>2<sup>nd</sup>Assignment</th>
+                        <th>2<sup>nd</sup>exercise</th>
+                        <th>test</th>
+                        <th>Project</th>
+                        <th>3<sup>rd</sup>Exercise</th>
+                        <th>Exam</th>
+                        <th>Total<br> Score</th>
+                        <th>Position</th>
+                        <th>Class Average</th>
+                        <th>Grade</th>
+                        <th>Remark</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                        @foreach ($results as $result)
+                      <tr>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{ $result->subject }}</strong></td>
+                        <td>{{ $result->one_set_weekly_ex }}</td>
+                        <td>{{ $result->take_home_ass }}</td>
+                        <td>{{ $result->one_class_test }}</td>
+                        <td>{{ $result->two_take_home_ass }}</td>
+                        <td>{{ $result->two_set_weekly_ex }}</td>
+                        <td>{{ $result->two_class_test }}</td>
+                        <td>{{ $result->project }}</td>
+                        <td>{{ $result->three_set_weekly_ex }}</td>
+                        <td>{{ $result->exam_score }}</td>
+                        <td>{{ $result->tt_score }}</td>
+                        <td>{{ $result->position }}</td>
+                        <td>{{ $result->class_avrg }}</td>
+                        <td>{{ $result->grade }}</td>
+                        <td>{{ $result->remark }}</td>
+                      </tr>
+                      @endforeach
+                    </tbody>
+                  </table>
                 </div>
               </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-12 mb-4">
-            <div class="card">
-              <div class="d-flex align-items-end row">
-                <div class="col-sm-7">
-                  <div class="card-body">
-                    <h5 class="card-title text-primary">Result Pin</h5>
-                    <p class="mb-4">
-                      Check Pin validation or duration
-                    </p>
-                    <button 
-                    data-bs-toggle="modal"
-                      data-bs-target="#changeTokenModal"
-                    class="btn btn-sm btn-outline-primary">Update token</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
+              <!-- Bootstrap Table with Header - Light -->
+          </div>     
           
-          
+
+          <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Position: {{ $detail->position }}</h5>
+                    <p class="card-text">Total Subject score: {{ $detail->tt_subject_score }}</p>
+                    <p class="card-text">Average score: {{ $detail->average_score }}</p>
+                    <p class="card-text">Comment: {{ $detail->comment }}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 d-flex justify-content-start">
+            <button class="btn btn-primary">Print Result</button>
+          </div>
           
         </div>
 </div>

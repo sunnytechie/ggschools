@@ -19,7 +19,7 @@
     <ul class="menu-inner py-1">
       <!-- Dashboard -->
       <li class="menu-item active">
-        <a href="#" class="menu-link">
+        <a href="{{ route('dashboard.index') }}" class="menu-link">
           <i class="menu-icon tf-icons bx bx-home-circle"></i>
           <div data-i18n="Analytics">Dashboard</div>
         </a>
@@ -27,36 +27,44 @@
 
    
       <li class="menu-item">
-        <a href="#" class="menu-link">
-          <i class="menu-icon tf-icons bx bx-bible"></i>
+        <a href="#"
+        data-bs-toggle="modal"
+                      data-bs-target="#purchaseModal" class="menu-link">
+          <i class="menu-icon tf-icons bx bx-cart-alt"></i>
           <div data-i18n="Tables">Purchase Token</div>
         </a>
       </li>
 
       <li class="menu-item">
-        <a href="#" class="menu-link">
-          <i class="menu-icon tf-icons bx bx-bible"></i>
+        <a href="#"
+        data-bs-toggle="modal"
+                      data-bs-target="#changeTokenModal"
+        class="menu-link">
+          <i class="menu-icon tf-icons bx bx-dialpad"></i>
           <div data-i18n="Tables">My Token</div>
         </a>
       </li>
 
       <li class="menu-item">
-        <a href="#" class="menu-link">
-          <i class="menu-icon tf-icons bx bx-bible"></i>
+        <a href="#"
+        data-bs-toggle="modal"
+        data-bs-target="#checkResultModal"
+        class="menu-link">
+          <i class="menu-icon tf-icons bx bx-list-ul"></i>
           <div data-i18n="Tables">Check Result</div>
         </a>
       </li>
 
       <li class="menu-item">
-        <a href="#" class="menu-link">
-          <i class="menu-icon tf-icons bx bx-bible"></i>
+        <a href="{{ route('upload.result') }}" class="menu-link">
+          <i class="menu-icon tf-icons bx bxs-user-account"></i>
           <div data-i18n="Tables">Admin</div>
         </a>
       </li>
 
       <li class="menu-item">
-        <a href="#" class="menu-link">
-          <i class="menu-icon tf-icons bx bx-bible"></i>
+        <a href="/" class="menu-link">
+          <i class="menu-icon tf-icons bx bx-globe"></i>
           <div data-i18n="Tables">Our Website</div>
         </a>
       </li>
