@@ -4,9 +4,9 @@
       <a href="/" class="app-brand-link">
         <span class="app-brand-logo demo">
           {{-- Logo Image --}}
-          <img width="40" height="40" src="{{ asset('assets/img/gglogo400.png') }}" alt="GGSchools">
+          <img width="40" height="40" src="{{ asset('assets/img/gglogo400.png') }}" alt="GGCollege">
         </span>
-        <span>GG Schools</span>
+        <span>GG College</span>
       </a>
 
       <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
