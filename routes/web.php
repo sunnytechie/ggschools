@@ -18,9 +18,12 @@ Route::put('/profile/{user}', [App\Http\Controllers\ProfileController::class, 'u
 Route::put('/token/{user}', [App\Http\Controllers\TokenController::class, 'update'])->name('update.token')->middleware('auth');
 Route::post('/result', [App\Http\Controllers\ResultCheckController::class, 'checkResult'])->name('checkResult')->middleware('auth');
 Route::get('/upload', [App\Http\Controllers\AdminController::class, 'index'])->name('upload.result')->middleware('auth');
-//Feedback
+//Imports
 Route::post('result-import', [App\Http\Controllers\AdminController::class, 'resultImport'])->name('result.import')->middleware('auth');
 Route::post('student-import', [App\Http\Controllers\AdminController::class, 'studentImport'])->name('student.import')->middleware('auth');
+//PDFs
+Route::get('pdf', [App\Http\Controllers\PdfController::class, 'pdf'])->name('pdf')->middleware('auth');
+//Route::get('pdfview',array('as'=>'pdfview','uses'=>'PdfController@pdfview'));
 
 //Website Pages
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');

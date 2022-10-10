@@ -10,7 +10,7 @@
               <div class="app-brand justify-content-center">
                   <a href="{{ route('login') }}" class="app-brand-link gap-2">
                     <span class="app-brand-logo demo">
-                      <img width="40" height="40" src="{{ asset('assets/dashboard/img/favicon/favicon.ico') }}" alt="ggschoold">
+                      <img width="80" height="80" src="{{ asset('assets/img/gglogo400.png') }}" alt="ggschoold">
                     </span>
                   </a>
                 </div>

@@ -4,7 +4,7 @@
       <a href="/" class="app-brand-link">
         <span class="app-brand-logo demo">
           {{-- Logo Image --}}
-          <img width="40" height="40" src="{{ asset('assets/dashboard/img/favicon/favicon.ico') }}" alt="GGSchools">
+          <img width="40" height="40" src="{{ asset('assets/img/gglogo400.png') }}" alt="GGSchools">
         </span>
         <span>GG Schools</span>
       </a>

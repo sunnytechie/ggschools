@@ -120,7 +120,7 @@
                                 <input type="text" value="">
                                 <input type="text" value="">
                                 <input type="text" value=""> --}}
-                            {{-- <p class="text-center">Generated on {{ date('Y-m-d H:i:s') }} <a href="{{ route('pdf') }}" class="btn btn-primary ml15"><i class="fa fa-print mr5"></i> Print Result</a></p> --}}
+                            <p class="text-center">Generated on {{ date('Y-m-d H:i:s') }} <a href="{{ route('pdf') }}" class="btn btn-primary ml15"><i class="fa fa-print mr5"></i> Print Result</a></p>
                             {{-- </form> --}}
                         </div>
                     </div>

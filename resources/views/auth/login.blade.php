@@ -11,7 +11,7 @@
                   {{-- Logo Image --}}
                   <span class="app-brand-logo demo">
                     
-                    <img width="40" height="40" src="{{ asset('assets/dashboard/img/favicon/favicon.ico') }}" alt="Conaio">
+                    <img width="80" height="80" src="{{ asset('assets/img/gglogo400.png') }}" alt="Conaio">
                   </span> 
                 </a>
               </div>
