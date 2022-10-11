@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <!--  This file has been downloaded from bootdey.com @bootdey on twitter -->
-    <!--  All snippets are MIT license http://bootdey.com/license -->
-    <title>Print Result</title>
-    <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/gglogo400.png') }}" />
+    <title>Student Result</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -19,23 +17,23 @@
 <div class="container bootdey">
 <div class="row invoice row-printable">
     <div class="col-md-12">
-        <!-- col-lg-12 start here -->
+        
         <div class="panel panel-default plain" id="dash_0">
-            <!-- Start .panel -->
+            
             <div class="panel-body p30">
                 <div class="row">
-                    <!-- Start .row -->
+                    
                     <div class="col-lg-6">
-                        <!-- col-lg-6 start here -->
+                        
                         <div class="invoice-logo">
                           <a href="/">
-                            <img width="100" src="{{ asset('assets/img/gglogo400.png') }}" alt="Invoice logo">
+                            <img width="100" src="https://www.gurusandgeniusschools.org/assets/img/gglogo400.png" alt="Invoice logo">
                           </a>
                         </div>
                     </div>
-                    <!-- col-lg-6 end here -->
+                    
                     <div class="col-lg-6">
-                        <!-- col-lg-6 start here -->
+                        
                         <div class="invoice-from">
                             <ul class="list-unstyled text-right">
                                 <li>No.3 Obidike Street Opp. Golden Garden, Odume Layout Obosi</li>
@@ -45,9 +43,9 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- col-lg-6 end here -->
+                    
                     <div class="col-lg-12">
-                        <!-- col-lg-12 start here -->
+                        
                         <div class="invoice-details mt25">
                             <div class="well">
                                 <ul class="list-unstyled mb0">
@@ -114,24 +112,16 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="invoice-footer mt25">
-                            {{-- <form action="{{ route('pdf') }}" method="POST">
-                                <input type="text" value="">
-                                <input type="text" value="">
-                                <input type="text" value="">
-                                <input type="text" value=""> --}}
-                            <p class="text-center">Generated on {{ date('Y-m-d H:i:s') }} <a href="{{ route('pdf') }}" class="btn btn-primary ml15"><i class="fa fa-print mr5"></i> Print Result</a></p>
-                            {{-- </form> --}}
-                        </div>
+                        
                     </div>
-                    <!-- col-lg-12 end here -->
+                    
                 </div>
-                <!-- End .row -->
+               
             </div>
         </div>
-        <!-- End .panel -->
+        
     </div>
-    <!-- col-lg-12 end here -->
+    
 </div>
 </div>
 

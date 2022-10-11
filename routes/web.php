@@ -22,7 +22,7 @@ Route::get('/upload', [App\Http\Controllers\AdminController::class, 'index'])->n
 Route::post('result-import', [App\Http\Controllers\AdminController::class, 'resultImport'])->name('result.import')->middleware('auth');
 Route::post('student-import', [App\Http\Controllers\AdminController::class, 'studentImport'])->name('student.import')->middleware('auth');
 //PDFs
-Route::get('pdf', [App\Http\Controllers\PdfController::class, 'pdf'])->name('pdf')->middleware('auth');
+Route::post('pdf', [App\Http\Controllers\PdfController::class, 'pdf'])->name('pdf')->middleware('auth');
 //Route::get('pdfview',array('as'=>'pdfview','uses'=>'PdfController@pdfview'));
 
 //Website Pages

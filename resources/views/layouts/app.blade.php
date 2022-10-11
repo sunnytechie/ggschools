@@ -22,7 +22,7 @@
         <meta property="og:url" content="{{ url()->current() }}" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="{{ config('app.name') }}" />
-        <meta property="og:description" content="Gurus and Genius Schools" />
+        <meta property="og:description" content="Gurus and Genius College" />
         <meta property="og:image" content="{{ asset('assets/img/600.jpg') }}" />
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />

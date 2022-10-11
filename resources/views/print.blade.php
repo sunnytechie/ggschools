@@ -115,13 +115,14 @@
                             </div>
                         </div>
                         <div class="invoice-footer mt25">
-                            {{-- <form action="{{ route('pdf') }}" method="POST">
-                                <input type="text" value="">
-                                <input type="text" value="">
-                                <input type="text" value="">
-                                <input type="text" value=""> --}}
-                            {{-- <p class="text-center">Generated on {{ date('Y-m-d H:i:s') }} <a href="{{ route('pdf') }}" class="btn btn-primary ml15"><i class="fa fa-print mr5"></i> Print Result</a></p> --}}
-                            {{-- </form> --}}
+                         <form action="{{ route('pdf') }}" method="POST">
+                            @csrf
+                                <input type="hidden" name="reg_no" value="{{ $detail->reg_no }}">
+                                <input type="hidden" name="student_class" value="{{ $detail->student_class }}">
+                                <input type="hidden" name="session" value="{{ $detail->academic_session }}">
+                                <input type="hidden" name="term" value="{{ $detail->term }}"> 
+                             <p class="text-center">Generated on {{ date('Y-m-d H:i:s') }} <button type="submit" class="btn btn-primary ml15"><i class="fa fa-print mr5"></i> Print Result</button></p>
+                        </form>
                         </div>
                     </div>
                     <!-- col-lg-12 end here -->

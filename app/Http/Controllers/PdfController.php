@@ -10,6 +10,9 @@ class PdfController extends Controller
 {
     public function pdf(Request $request)
     {
+
+        //dd($request->all());
+
         $results = Result::where('student_class', $request->student_class)
                         ->where('reg_no', $request->reg_no)
                         ->where('academic_session', $request->session)
@@ -21,9 +24,9 @@ class PdfController extends Controller
                         ->where('reg_no', $request->reg_no)
                         ->where('academic_session', $request->session)
                         ->where('term', $request->term)->first();
-
-        $data = ['results' => $results, 'detail' => $detail];
-        $pdf = PDF::loadView('result', $data);
+                        //dd($detail);
+        
+        $pdf = PDF::loadView('result', ['results' => $results, 'detail' => $detail]);
   
         return $pdf->download('online-result.pdf');
     }
