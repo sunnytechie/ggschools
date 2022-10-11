@@ -26,6 +26,7 @@ class User extends Authenticatable
         'reg_no',
         'student_class',
         'token',
+        'admin_type',
     ];
 
     /**

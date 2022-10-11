@@ -54,14 +54,14 @@
           <div data-i18n="Tables">Check Result</div>
         </a>
       </li>
-
+      @if (Auth::user()->admin_type == 1)
       <li class="menu-item">
         <a href="{{ route('upload.result') }}" class="menu-link">
           <i class="menu-icon tf-icons bx bxs-user-account"></i>
           <div data-i18n="Tables">Admin</div>
         </a>
       </li>
-
+      @endif
       <li class="menu-item">
         <a href="/" class="menu-link">
           <i class="menu-icon tf-icons bx bx-globe"></i>

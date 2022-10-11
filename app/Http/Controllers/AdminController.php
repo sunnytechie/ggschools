@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Imports\ResultsImport;
 use App\Imports\StudentsImport;
+use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Facades\Excel;
 
 class AdminController extends Controller
@@ -16,7 +17,13 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        if (Auth::user()->admin_type == 1) {
+            return view('admin.index');
+        } else {
+            return view('dashboard');
+        }
+        
+        
     }
 
     //Import result from Excel file
