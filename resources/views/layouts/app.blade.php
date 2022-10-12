@@ -29,7 +29,7 @@
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:alt" content="{{ config('app.name') }}" />
 
-        <title>{{ config('app.name', 'Conaio') }}</title>
+        <title>Gurus and Genius Schools - Geniune knowledge in Practice.</title>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
