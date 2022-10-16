@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <h1 class="mb-4">Learn More About Our Cultural & Activities</h1>
+                <h1 class="mb-4">Learn More About Gurus and Genius College</h1>
                 <p>Our vision <br> is to build a first class school providing first scholars.</p>
                 <p class="mb-4">Our Mission<br> Setting mindset of pupils or students on being the best at what they like doing (profession) and making out something of their own like geniuses.</p>
                 <div class="row g-4 align-items-center">

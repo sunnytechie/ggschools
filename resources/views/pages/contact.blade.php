@@ -49,30 +49,52 @@
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                         <div class="h-100 d-flex flex-column justify-content-center p-5">
                             <p class="mb-4">Fill the form below to quickly send us a message</a>.</p>
-                            <form>
+                            <form action="{{ route('email.contact') }}" method="POST">
+                                @csrf
+
                                 <div class="row g-3">
                                     <div class="col-sm-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control border-0" id="name" placeholder="Your Name">
+                                            <input type="text" class="form-control @error('name') is-invalid @enderror border-0" id="name" name="name" placeholder="Your Name" required> 
                                             <label for="name">Your Name</label>
+                                            @error('name')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-floating">
-                                            <input type="email" class="form-control border-0" id="email" placeholder="Your Email">
+                                            <input type="email" class="form-control @error('email') is-invalid @enderror border-0" id="email" name="email" placeholder="Your Email" required>
                                             <label for="email">Your Email</label>
+                                            @error('email')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control border-0" id="subject" placeholder="Subject">
+                                            <input type="text" class="form-control @error('subject') is-invalid @enderror border-0" name="subject" id="subject" placeholder="Subject" required>
                                             <label for="subject">Subject</label>
+                                            @error('subject')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                            <textarea class="form-control @error('message') is-invalid @enderror border-0" name="message" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
                                             <label for="message">Message</label>
+                                            @error('message')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="col-12">
@@ -85,7 +107,7 @@
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
                         <div class="position-relative h-100">
                             <iframe class="position-relative rounded w-100 h-100"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15870.577286187652!2d6.893012!3d6.0434429!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x825cf148604da5cb!2sGurus%20and%20Genius%20College!5e0!3m2!1sen!2sng!4v1665964309074!5m2!1sen!2sng"
                             frameborder="0" style="min-height: 400px; border:0;" allowfullscreen="" aria-hidden="false"
                             tabindex="0"></iframe>
                         </div>

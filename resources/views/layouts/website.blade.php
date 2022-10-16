@@ -42,7 +42,13 @@
         <!-- Spinner End -->
 
         @include('include.navbar')
-
+        {{-- Notification --}}
+        @if (session('success'))
+        <div class="alert alert-warning alert-dismissible fade show" role="alert" style="position: fixed; bottom: 2px; left:10px; left: 10px; width: 290px; z-index: 999">
+            <strong>Heads up!</strong> {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        @endif
         <main>
             @yield('content')
         </main>

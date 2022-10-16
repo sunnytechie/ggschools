@@ -14,7 +14,7 @@
                         <p class="mb-4">
                             Our teachers are highly intellectual. Do you have what it takes to be a great teacher? come to gurus and genius schools.
                         </p>
-                        <a class="btn btn-primary py-3 px-5" href="#">Get Started Now<i class="fa fa-arrow-right ms-2"></i></a>
+                        <a class="btn btn-primary py-3 px-5" href="{{ route('contact') }}">Get Started Now<i class="fa fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>

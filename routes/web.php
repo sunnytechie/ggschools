@@ -38,4 +38,10 @@ Route::get('/admission', [App\Http\Controllers\PageController::class, 'admission
 Route::get('authorized/google', [App\Http\Controllers\Api\LoginWithGoogleController::class, 'redirectToGoogle'])->name('redirectToGoogle');
 Route::get('authorized/google/callback', [App\Http\Controllers\Api\LoginWithGoogleController::class, 'handleGoogleCallback'])->name('handleGoogleCallback');
 
+//Email Route
+Route::post('/appointment', [App\Http\Controllers\EmailController::class, 'appointment'])->name('email.appointment');
+Route::post('/subscriber', [App\Http\Controllers\EmailController::class, 'subscriber'])->name('email.subscriber');
+Route::post('/contact', [App\Http\Controllers\EmailController::class, 'contact'])->name('email.contact');
+//End Email Route
+
 require __DIR__.'/auth.php';
