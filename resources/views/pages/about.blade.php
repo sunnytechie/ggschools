@@ -20,5 +20,5 @@
     
     @include('include.home.action')
 
-    @include('include.home.team')
+    @include('include.home.gallery')
 @endsection

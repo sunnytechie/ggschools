@@ -18,6 +18,7 @@
                     {{-- <a href="team.html" class="dropdown-item">Popular Teachers</a> --}}
                     <a href="{{ route('teacher') }}" class="dropdown-item">Become A Teachers</a>
                     <a href="{{ route('appointment') }}" class="dropdown-item">Make Appointment</a>
+                    <a href="{{ route('policy') }}" class="dropdown-item">Privacy Policy</a>
                     {{-- <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                     <a href="404.html" class="dropdown-item">404 Error</a> --}}
                 </div>

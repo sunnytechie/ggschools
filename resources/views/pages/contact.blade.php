@@ -107,7 +107,7 @@
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
                         <div class="position-relative h-100">
                             <iframe class="position-relative rounded w-100 h-100"
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15870.577286187652!2d6.893012!3d6.0434429!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x825cf148604da5cb!2sGurus%20and%20Genius%20College!5e0!3m2!1sen!2sng!4v1665964309074!5m2!1sen!2sng"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.9026819584838!2d6.832886813950629!3d6.143772629167569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1043978f6b358d7f%3A0x825cf148604da5cb!2sGurus%20and%20Genius%20College!5e0!3m2!1sen!2sng!4v1667988472296!5m2!1sen!2sng"
                             frameborder="0" style="min-height: 400px; border:0;" allowfullscreen="" aria-hidden="false"
                             tabindex="0"></iframe>
                         </div>

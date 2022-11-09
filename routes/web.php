@@ -34,6 +34,7 @@ Route::get('/teachers', [App\Http\Controllers\PageController::class, 'teacher'])
 Route::get('/appointments', [App\Http\Controllers\PageController::class, 'appointment'])->name('appointment');
 Route::get('/contact-us', [App\Http\Controllers\PageController::class, 'contact'])->name('contact');
 Route::get('/admission', [App\Http\Controllers\PageController::class, 'admission'])->name('admission');
+Route::get('/privacy-policy', [App\Http\Controllers\PageController::class, 'policy'])->name('policy');
 
 Route::get('authorized/google', [App\Http\Controllers\Api\LoginWithGoogleController::class, 'redirectToGoogle'])->name('redirectToGoogle');
 Route::get('authorized/google/callback', [App\Http\Controllers\Api\LoginWithGoogleController::class, 'handleGoogleCallback'])->name('handleGoogleCallback');

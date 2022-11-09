@@ -13,5 +13,5 @@
     
     @include('include.home.appointment')
 
-    @include('include.home.team')
+    @include('include.home.gallery')
 @endsection

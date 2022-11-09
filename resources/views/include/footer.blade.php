@@ -16,11 +16,10 @@
             </div>
             <div class="col-lg-3 col-md-6">
                 <h3 class="text-white mb-4">Quick Links</h3>
-                <a class="btn btn-link text-white-50" href="">About Us</a>
-                <a class="btn btn-link text-white-50" href="">Contact Us</a>
-                <a class="btn btn-link text-white-50" href="">Our Services</a>
-                <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
-                <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                <a class="btn btn-link text-white-50" href="{{ route('about') }}">About Us</a>
+                <a class="btn btn-link text-white-50" href="{{ route('contact') }}">Contact Us</a>
+                <a class="btn btn-link text-white-50" href="{{ route('dashboard.index') }}">Check Results</a>
+                <a class="btn btn-link text-white-50" href="{{ route('policy') }}">Privacy Policy</a>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h3 class="text-white mb-4">Photo Gallery</h3>
@@ -70,10 +69,9 @@
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <div class="footer-menu">
-                        <a href="">Home</a>
-                        <a href="">Cookies</a>
-                        <a href="">Help</a>
-                        <a href="">FQAs</a>
+                        <a href="{{ route('home.index') }}">Home</a>
+                        <a href="{{ route('contact') }}">Contact</a>
+                        <a href="{{ route('contact') }}">Help</a>
                     </div>
                 </div>
             </div>

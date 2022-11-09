@@ -10,6 +10,10 @@ class PageController extends Controller
         return view('pages.about');
     }
 
+    public function policy() {
+        return view('pages.policy');
+    }
+
     public function classes() {
         return view('pages.class');
     }
